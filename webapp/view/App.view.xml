@@ -6,7 +6,8 @@
             <pages>
                 <Page id="page" title="{i18n>title}">
                     <content>
-                        <Button text="Hello world" type="Accept" press="onpress" />
+                        <Button text="Hello {/user}" type="Accept" press="onpress" />
+                        <input value="{/user}" description = "Hello {/user}" valueLiveUpdate="true" width="60%"/>
                     </content>
                 </Page>
             </pages>
