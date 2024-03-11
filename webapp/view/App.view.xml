@@ -6,8 +6,14 @@
             <pages>
                 <Page id="page" title="{i18n>title}">
                     <content>
-                        <Button text="Hello {/user}" type="Accept" press="onpress" />
-                        <input value="{/user}" description = "Hello {/user}" valueLiveUpdate="true" width="60%"/>
+                        <Input
+                            value="{/user}"
+                            placeholder="Enter your name"
+                        />
+                        <Button
+                            text="Press for greetings"
+                            press="onPress"
+                        />
                     </content>
                 </Page>
             </pages>

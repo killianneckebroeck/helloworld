@@ -10,13 +10,15 @@ sap.ui.define([
         return Controller.extend("be.hogent.aalst.helloworld.controller.App", {
             onInit: function () {
                 const oData = {
-                    user: "Killian",
+                    name: "",
                 };
                 const oModel = new JSONModel(oData);
-                this.getView().setModel(oModel);
+                this.getView().setModel(oModel,);
             },
-            onpress: function (evt) {
-                MessageToast.show(evt.getSource().getId() + " Pressed");
+            onPress: function (evt) {
+                MessageToast.show(
+                    "Hello " + this.getView().getModel().getProperty("/user")
+                  );
               },
         });
     });
